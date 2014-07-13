@@ -6210,6 +6210,7 @@ Right-Handpiece: Space-Key</text>
 <wire x1="0" y1="-40.64" x2="0" y2="0" width="0.4064" layer="97" style="shortdash"/>
 <text x="96.52" y="-2.54" size="1.778" layer="97">Only populated on Left-Handpiece</text>
 <text x="5.08" y="-2.54" size="1.778" layer="97">Only populated on Right-Handpiece</text>
+<text x="154.94" y="96.52" size="1.778" layer="97">To Centerpiece</text>
 </plain>
 <instances>
 <instance part="N0" gate="G$1" x="10.16" y="91.44" rot="R90"/>
