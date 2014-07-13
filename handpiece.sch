@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -6468,8 +6468,8 @@ Right-Handpiece: Space-Key</text>
 <wire x1="-20.32" y1="22.86" x2="-20.32" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD0(RXD)"/>
-<wire x1="157.48" y1="10.16" x2="170.18" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PD1(TXD)"/>
+<wire x1="157.48" y1="12.7" x2="170.18" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TF" class="0">
@@ -6489,8 +6489,8 @@ Right-Handpiece: Space-Key</text>
 <wire x1="22.86" y1="2.54" x2="22.86" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD1(TXD)"/>
-<wire x1="157.48" y1="12.7" x2="170.18" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PD0(RXD)"/>
+<wire x1="157.48" y1="10.16" x2="170.18" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PP" class="0">
@@ -6562,51 +6562,50 @@ Right-Handpiece: Space-Key</text>
 <wire x1="114.3" y1="27.94" x2="114.3" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PB1(OC1A)"/>
-<wire x1="157.48" y1="35.56" x2="170.18" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PB2(SS/OC1B)"/>
+<wire x1="157.48" y1="38.1" x2="170.18" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="EA" class="0">
 <segment>
 <pinref part="E" gate="G$1" pin="PIN-2"/>
 <wire x1="5.08" y1="-22.86" x2="5.08" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="A" gate="G$1" pin="PIN-2"/>
 <wire x1="5.08" y1="-12.7" x2="53.34" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-12.7" x2="53.34" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="A" gate="G$1" pin="PIN-2"/>
 <wire x1="53.34" y1="-12.7" x2="99.06" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="-12.7" x2="99.06" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="-12.7" x2="53.34" y2="2.54" width="0.1524" layer="91"/>
-<junction x="53.34" y="-12.7"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD3(INT1)"/>
-<wire x1="157.48" y1="17.78" x2="170.18" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PD2(INT0)"/>
+<wire x1="157.48" y1="15.24" x2="170.18" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="OU" class="0">
 <segment>
 <pinref part="U" gate="G$1" pin="PIN-2"/>
 <wire x1="30.48" y1="-22.86" x2="30.48" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="O" gate="G$1" pin="PIN-2"/>
 <wire x1="30.48" y1="-15.24" x2="55.88" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="-15.24" x2="121.92" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="-15.24" x2="121.92" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="2.54" x2="55.88" y2="-15.24" width="0.1524" layer="91"/>
 <junction x="55.88" y="-15.24"/>
+<pinref part="O" gate="G$1" pin="PIN-2"/>
+<wire x1="121.92" y1="-15.24" x2="121.92" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD4(XCK/T0)"/>
-<wire x1="157.48" y1="20.32" x2="170.18" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PD3(INT1)"/>
+<wire x1="157.48" y1="17.78" x2="170.18" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="PB2(SS/OC1B)"/>
-<wire x1="157.48" y1="38.1" x2="170.18" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="D" gate="G$1" pin="PIN-2"/>
 <wire x1="114.3" y1="48.26" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="2.54" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="PB1(OC1A)"/>
+<wire x1="157.48" y1="35.56" x2="170.18" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N" class="0">
@@ -6637,8 +6636,8 @@ Right-Handpiece: Space-Key</text>
 <wire x1="142.24" y1="78.74" x2="127" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD2(INT0)"/>
-<wire x1="157.48" y1="15.24" x2="170.18" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PB0(ICP)"/>
+<wire x1="157.48" y1="33.02" x2="170.18" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL" class="0">
