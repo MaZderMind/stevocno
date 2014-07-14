@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -6177,13 +6177,16 @@ DIN female/male, etc.&lt;p&gt;
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
-<part name="X1" library="con-yamaichi" deviceset="MD06SS" device=""/>
+<part name="CL" library="con-yamaichi" deviceset="MD06SS" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
+<part name="CR" library="con-yamaichi" deviceset="MD06SS" device=""/>
+<part name="GND21" library="supply1" deviceset="GND" device=""/>
+<part name="P+5" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6210,7 +6213,12 @@ Right-Handpiece: Space-Key</text>
 <wire x1="0" y1="-40.64" x2="0" y2="0" width="0.4064" layer="97" style="shortdash"/>
 <text x="96.52" y="-2.54" size="1.778" layer="97">Only populated on Left-Handpiece</text>
 <text x="5.08" y="-2.54" size="1.778" layer="97">Only populated on Right-Handpiece</text>
-<text x="154.94" y="96.52" size="1.778" layer="97">To Centerpiece</text>
+<text x="152.4" y="99.06" size="1.778" layer="97">To Centerpiece
+Only one of both populared</text>
+<wire x1="149.86" y1="104.14" x2="200.66" y2="104.14" width="0.4064" layer="97" style="shortdash"/>
+<wire x1="200.66" y1="55.88" x2="200.66" y2="104.14" width="0.4064" layer="97" style="shortdash"/>
+<wire x1="200.66" y1="55.88" x2="149.86" y2="55.88" width="0.4064" layer="97" style="shortdash"/>
+<wire x1="149.86" y1="104.14" x2="149.86" y2="55.88" width="0.4064" layer="97" style="shortdash"/>
 </plain>
 <instances>
 <instance part="N0" gate="G$1" x="10.16" y="91.44" rot="R90"/>
@@ -6257,13 +6265,16 @@ Right-Handpiece: Space-Key</text>
 <instance part="GND15" gate="1" x="68.58" y="38.1" rot="R180"/>
 <instance part="GND16" gate="1" x="91.44" y="38.1" rot="R180"/>
 <instance part="GND17" gate="1" x="114.3" y="38.1" rot="R180"/>
-<instance part="X1" gate="G$1" x="162.56" y="86.36" rot="R90"/>
+<instance part="CL" gate="G$1" x="162.56" y="86.36" rot="R90"/>
 <instance part="GND18" gate="1" x="154.94" y="60.96"/>
 <instance part="P+6" gate="VCC" x="160.02" y="60.96" rot="R180"/>
 <instance part="GND1" gate="1" x="12.7" y="-20.32" rot="R90"/>
 <instance part="GND2" gate="1" x="38.1" y="-20.32" rot="R90"/>
 <instance part="GND19" gate="1" x="106.68" y="-20.32" rot="R90"/>
 <instance part="GND20" gate="1" x="129.54" y="-20.32" rot="R90"/>
+<instance part="CR" gate="G$1" x="190.5" y="86.36" rot="R90"/>
+<instance part="GND21" gate="1" x="182.88" y="60.96"/>
+<instance part="P+5" gate="VCC" x="187.96" y="60.96" rot="R180"/>
 </instances>
 <busses>
 <bus name="KEYS:SS,N,TF,KR,PP,WB,HL,RG,T,S,D,Z,EA,OU">
@@ -6388,9 +6399,9 @@ Right-Handpiece: Space-Key</text>
 </segment>
 <segment>
 <pinref part="GND18" gate="1" pin="GND"/>
-<pinref part="X1" gate="G$1" pin="1"/>
+<pinref part="CL" gate="G$1" pin="1"/>
 <wire x1="154.94" y1="63.5" x2="154.94" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="X1" gate="G$1" pin="2"/>
+<pinref part="CL" gate="G$1" pin="2"/>
 <wire x1="154.94" y1="73.66" x2="154.94" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="76.2" x2="157.48" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="73.66" x2="154.94" y2="73.66" width="0.1524" layer="91"/>
@@ -6416,6 +6427,16 @@ Right-Handpiece: Space-Key</text>
 <pinref part="GND20" gate="1" pin="GND"/>
 <wire x1="127" y1="-22.86" x2="127" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="GND21" gate="1" pin="GND"/>
+<pinref part="CR" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="63.5" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="CR" gate="G$1" pin="2"/>
+<wire x1="182.88" y1="73.66" x2="182.88" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="73.66" x2="185.42" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="73.66" x2="185.42" y2="76.2" width="0.1524" layer="91"/>
+<junction x="182.88" y="73.66"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -6439,14 +6460,24 @@ Right-Handpiece: Space-Key</text>
 <wire x1="243.84" y1="25.4" x2="243.84" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X1" gate="G$1" pin="3"/>
+<pinref part="CL" gate="G$1" pin="3"/>
 <pinref part="P+6" gate="VCC" pin="VCC"/>
 <wire x1="160.02" y1="76.2" x2="160.02" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="X1" gate="G$1" pin="5"/>
+<pinref part="CL" gate="G$1" pin="5"/>
 <wire x1="160.02" y1="73.66" x2="160.02" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="76.2" x2="165.1" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="73.66" x2="160.02" y2="73.66" width="0.1524" layer="91"/>
 <junction x="160.02" y="73.66"/>
+</segment>
+<segment>
+<pinref part="P+5" gate="VCC" pin="VCC"/>
+<pinref part="CR" gate="G$1" pin="3"/>
+<wire x1="187.96" y1="63.5" x2="187.96" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="CR" gate="G$1" pin="5"/>
+<wire x1="187.96" y1="73.66" x2="187.96" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="73.66" x2="193.04" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="73.66" x2="193.04" y2="76.2" width="0.1524" layer="91"/>
+<junction x="187.96" y="73.66"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -6644,18 +6675,30 @@ Right-Handpiece: Space-Key</text>
 <segment>
 <pinref part="IC1" gate="G$1" pin="PC5(ADC5/SCL)"/>
 <wire x1="170.18" y1="0" x2="167.64" y2="0" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="0" x2="167.64" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="X1" gate="G$1" pin="6"/>
+<wire x1="167.64" y1="0" x2="167.64" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="CL" gate="G$1" pin="6"/>
+<pinref part="CR" gate="G$1" pin="6"/>
+<wire x1="167.64" y1="50.8" x2="167.64" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="76.2" x2="195.58" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="50.8" x2="167.64" y2="50.8" width="0.1524" layer="91"/>
+<junction x="167.64" y="50.8"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PC4(ADC4/SDA)"/>
 <wire x1="170.18" y1="-2.54" x2="165.1" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="-2.54" x2="165.1" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="X1" gate="G$1" pin="4"/>
+<wire x1="165.1" y1="-2.54" x2="165.1" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="CL" gate="G$1" pin="4"/>
+<wire x1="165.1" y1="53.34" x2="165.1" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="76.2" x2="162.56" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="66.04" x2="162.56" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="CR" gate="G$1" pin="4"/>
+<wire x1="190.5" y1="76.2" x2="190.5" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="66.04" x2="193.04" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="66.04" x2="193.04" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="53.34" x2="165.1" y2="53.34" width="0.1524" layer="91"/>
+<junction x="165.1" y="53.34"/>
 </segment>
 </net>
 </nets>
