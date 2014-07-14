@@ -6331,6 +6331,7 @@ Only one of both populared</text>
 <wire x1="220.98" y1="-7.62" x2="223.52" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="GND"/>
 <wire x1="220.98" y1="-7.62" x2="218.44" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="220.98" y="-7.62"/>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
@@ -6497,6 +6498,7 @@ Only one of both populared</text>
 <wire x1="-5.08" y1="27.94" x2="-5.08" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="22.86" x2="-20.32" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="22.86" x2="-20.32" y2="2.54" width="0.1524" layer="91"/>
+<junction x="-5.08" y="27.94"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="PD1(TXD)"/>
@@ -6606,6 +6608,7 @@ Only one of both populared</text>
 <pinref part="A" gate="G$1" pin="PIN-2"/>
 <wire x1="53.34" y1="-12.7" x2="99.06" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="-12.7" x2="99.06" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="53.34" y="-12.7"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="PD2(INT0)"/>
