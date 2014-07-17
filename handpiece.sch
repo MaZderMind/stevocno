@@ -69,6 +69,8 @@
 <pad name="P$3" x="-5.08" y="0" drill="1.7144" diameter="1.778"/>
 <pad name="P$4" x="5.08" y="0" drill="1.7144" diameter="1.778"/>
 <hole x="0" y="0" drill="4.0004"/>
+<text x="-7.112" y="5.588" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5.715" y="-6.985" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
